@@ -1,179 +1,272 @@
-
-body {
-  background: #5b5b5b url(../images/bg-body.png) no-repeat top center;
-  font: normal 12px/1.4 Helvetica, Arial, sans-serif;
-}
+@import "mixins.css.less";
 
 /*==================================
         S T R U C T U R E
 ====================================*/
 
-.container {
-  clear: both;
-  margin: 0 auto;
-  position: relative;
-  width: 800px;
-}
+  body {
+    background: #5b5b5b url(../images/bg-body.png) no-repeat top center;
+    font: normal 12px/1.4 Helvetica, Arial, sans-serif;
+  }
+
+  .container {
+    clear: both;
+    margin: 0 auto;
+    position: relative;
+    width: 800px;
+  }
 
 /*==================================
-       U T I L I T Y
+       U T I L I T I E S
 ====================================*/
 
-.arrow-link {
-  color: #1B70AB;
-  font-weight: 700;
-  font-size: 13px;
-  padding-right: 15px;
-  background: url(../images/arrow-icon.png) no-repeat right;
-  text-decoration: none;
-}
+  .arrow-link {
+    background: url(../images/arrow-icon.png) no-repeat right;
+    color: #2877ae;
+    font-weight: 700;
+    font-size: 13px;
+    padding-right: 15px;
+    text-decoration: none;
+  }
+
+/* --- [ GLOBAL BUTTON STYLES ] --- */
+
+  .btn-primary {
+    background: #4883ad;
+    background-image: linear-gradient(bottom, rgb(72,131,173) 0%, rgb(76,141,188) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(72,131,173) 0%, rgb(76,141,188) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(72,131,173) 0%, rgb(76,141,188) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(72,131,173) 0%, rgb(76,141,188) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(72,131,173) 0%, rgb(76,141,188) 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(72,131,173)), color-stop(1, rgb(76,141,188)));
+    border: 1px solid #4089A4;
+    .border-radius(4px);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+       -moz-box-shadow: 0 1px 2px rgba(0,0,0,.4);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 200;
+    position: relative;
+
+    &:hover {
+      background: #4c8dbc;
+    }
+
+    &:active {
+      -webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,.5);
+         -moz-box-shadow:inset 0 1px 3px rgba(0,0,0,.5);
+              box-shadow:inset 0 1px 3px rgba(0,0,0,.5);
+
+      .btn-top {
+        display:none;
+      }
+
+    }
+
+    .btn-top {
+      .border-radius(6px);
+      border-top: 1px solid rgba(255, 255, 255, .3);
+      height: 7px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    a {
+      color: #fff;
+      display: block;
+      text-decoration: none;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+    }
+
+    .btn-icon {
+      display: inline-block;
+      height: 25px;
+      position: absolute;
+      width: 25px;
+    }
+
+  }
 
 /*==================================
           H E A D E R
 ====================================*/
 
-#header-wrap {
-  height:250px;
-}
+  #header-wrap {
+    height:250px;
+  }
 
-#header-nav {
-  background: #D5D5D5;
-  filter: alpha(opacity=40);
-  float: left;
-  height: 15px;
-  opacity: .4;
-  padding: 4px 0px;
-  position: relative;
+/* --- [ HEADER NAV ] --- */
 
-  li {
+  #header-nav {
+    background: #D5D5D5;
+    filter: alpha(opacity=40);
     float: left;
-    padding: 1px 8px;
-    line-height: 13px;
-    font-size: 12px;
-    color: #2a2a2a;
-    border-left: 1px solid #292929;
+    height: 15px;
+    opacity: .4;
+    padding: 4px 0px;
+    position: relative;
+
+    li {
+      border-left: 1px solid #292929;
+      color: #2a2a2a;
+      float: left;
+      font-size: 12px;
+      line-height: 13px;
+      padding: 1px 8px;
+    }
+
+    li:first-child {
+      border: none
+    }
+
+    li a {
+      color: #2A2A2A
+    }
+
+    li a:hover {
+      color: #2A2A2A;
+      text-decoration: underline;
+    }
+
   }
 
-  li:first-child {
-    border: none
+/* --- [ HEADER SPONSOR LOGO ] --- */
+
+  #sponsor-logo {
+    background: url('../images/logo-meltmedia.png') no-repeat;
+    display: block;
+    height: 30px;
+    top: 10px;
+    position: absolute;
+    right: 20px;
+    -webkit-transition: background .2s ease-in-out;
+    width: 130px;
+
+    &:hover {
+      background-position: 0 -35px;
+    }
+
   }
 
-  li a {
-    color: #2A2A2A
+/* --- [ HEROSPACE TAGLINE ] --- */
+
+  .tagline {
+    bottom: 0;
+    color: @light-gray;
+    font-size: 2.9em;
+    font-weight: normal;
+    letter-spacing: .05em;
+    line-height:.7;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 35px;
   }
 
-  li a:hover {
-    color: #2A2A2A;
-    text-decoration: underline;
+/*==================================
+     C O N T E N T   W R A P
+====================================*/
+
+  #content-wrap {
+    background: #F3F3F3;
+    border: 5px solid @light-gray;
+    .border-radius(15px);
+    margin-bottom: 30px;
   }
-
-}
-
-#sponsor-logo {
-  display:block;
-  width: 130px;
-  height: 30px;
-  top: 10px;
-  position: absolute;
-  right: 20px;
-  background: url('../images/logo-meltmedia.png') no-repeat;
-  -webkit-transition:background .2s ease-in-out;
-
-  &:hover {
-    background-position: 0 -35px;
-  }
-
-}
-
-.tagline {
-  bottom: 0;
-  color: #dcdcdc;
-  font-size: 2.9em;
-  font-weight: normal;
-  letter-spacing: .05em;
-  line-height:.7;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  right: 35px;
-}
-
-#content-wrap {
-  background: #F3F3F3;
-  border: 5px solid #DCDCDC;
-  -webkit-border-radius: 15px;
-     -moz-border-radius: 15px;
-          border-radius: 15px;
-  margin-bottom: 30px;
-}
 
 /*==================================
           S I D E B A R
 ====================================*/
 
 #sidebar {
-  width: 200px;
   float: left;
+  width: 200px;
 }
 
-.main-nav {
-  margin: 20px 0px 0px 0px;
-  nowhitespace: afterproperty;
-  padding: 0px;
+/* --- [ MAIN NAVIGATION] --- */
 
-  li {
-    width: 200px;
-    height: 35px;
-  }
+  .main-nav {
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
 
-  a {
-    padding: 6px 15px 5px 20px;
-    font-size: 17px;
-    color: #b7b7b7;
-  }
+    li {
+      height: 35px;
+      width: 200px;
+    }
 
-  a:hover {
-    padding: 6px 15px 5px 20px;
-    background: #dcdcdc;
-    color: #4d8fbd;
-    text-decoration: none;
-  }
+    a {
+      color: #b7b7b7;
+      font-size: 17px;
+      padding: 6px 15px 5px 20px;
+    }
 
-  a.active {
-    color: #4d8fbd;
-    background: #dcdcdc;
-    padding-left: 20px;
+    a:hover {
+      background: @light-gray;
+      color: #4d8fbd;
+      padding: 6px 15px 5px 20px;
+      text-decoration: none;
+    }
 
-    &:hover {
-      cursor: default;
+    a.active {
+      background: @light-gray;
+      color: #4d8fbd;
+      padding-left: 20px;
+
+      &:hover {
+        cursor: default;
+      }
+
     }
 
   }
 
-}
 
-#register-callout {
-  background: #dcdcdc;
-  height: 248px;
-  padding-left: 30px;
-  position: relative;
-  top: 30px;
-  width: 160px;
+/* --- [ REGISTER CALLOUT ] --- */
 
-  img {
+  #register-callout {
+    background: @light-gray;
+    padding: 0 0 20px 30px;
     position: relative;
-    top: -10px;
-  }
+    top: 30px;
+    width: 160px;
 
-  p {
-    color: #474747;
-    font-size: 1em;
-    margin: 0;
-    line-height: 1.3em;
-    width: 145px;
-  }
+    img {
+      position: relative;
+      top: -10px;
+    }
 
-}
+    p {
+      color: #5a5a5a;
+      margin: 0;
+    }
+
+    #btn-register {
+      margin-top: 15px;
+
+      &:hover {
+
+        .btn-icon {
+          background-position: 0 -27px;
+        }
+
+      }
+
+      .btn-icon {
+        background: url(../images/icon-register-btn.png) no-repeat;
+        left: 7px;
+        top: 5px;
+      }
+
+      a {
+        padding: 8px 15px 7px 38px;
+      }
+
+    }
+
+  }
 
 /*==================================
           C O N T E N T
@@ -186,165 +279,185 @@ body {
   padding: 0 10px 0 25px;
   width: 518px;
 
+  h2, h3, h4, h5 {
+    text-shadow: 0 1px 0 rgba(255,255,255,.75);
+  }
+
   h1 {
     color: #d5d5d5;
-    font-size: 6.5em;
+    font-size: 6.7em;
     font-weight: normal;
     line-height: 1;
-    margin: 20px 0;
+    margin: 18px 0;
     padding: 0;
   }
 
 }
 
-.event {
-  width: 477px;
-  height: 162px;
-  margin-top: 15px;
-  padding: 7px;
-  background: #D5D5D5;
-}
 
-.event-details {
-  width: 195px;
-  float: left;
-  line-height: 24px;
-  padding: 5px 0px 0px 5px;
+/* --- [ UPCOMINGS EVENTS SECTION ] --- */
 
-  h2 {
-    margin: 0px;
-    font-size: 24px;
-    color: #8C8C8C;
-    text-shadow: 0 1px 0 rgba(255,255,255,.75);
+  .event {
+    background: #d5d5d5;
+    height: 162px;
+    margin-top: 15px;
+    padding: 7px;
+    width: 477px;
   }
 
-  p {
-    position: relative;
-    top: 64px;
-    margin: 0;
-    font-size: 16px;
-    font-weight: 700;
-    color: #8C8C8C;
-  }
-
-}
-
-.event-date {
-  color: #575757
-}
-.event-img {
-  width: 236px;
-  height: 162px;
-  float: right;
-}
-#past-events-wrap {
-  width: 462px;
-  height: 75px;
-  margin-top: 15px;
-  margin-bottom: 0px;
-  padding: 15px;
-  background: #E5E5E5;
-}
-#archive-list-wrap {
-  width: 175px;
-  height: 80px;
-  margin: 0px;
-  float: left;
-  border-right: 1px solid #C7C7C7;
-}
-#archive-list-wrap h4 {
-  margin: 0px 0px 7px 0px;
-  font-size: 15px;
-  color: #8C8C8C;
-}
-
-#archive-list-wrap li {
-  margin: 0px 0px 0px 3px;
-  padding-left: 12px;
-  line-height: 15px;
-  background: url('../images/triangle-icon.png') no-repeat left;
-}
-
-#archive-list-wrap li a {
-  margin: 0px;
-  font-size: 11px;
-  color: #666;
-}
-
-#future-events-wrap {
-  width: 265px;
-  height: 80px;
-  margin: 0px;
-  padding-left: 20px;
-  float: right;
-  border-left: 1px solid #F0F0F0;
-}
-
-#future-events-wrap h3 {
-  line-height: 21px;
-  margin: 0 0 18px 0;
-  font-size: 21px; color:#666;
-}
-
-#future-events-wrap h3:first-child {
-  margin: 0px;
-  color: #8C8C8C;
-}
-
-/*==================================
-           F O O T E R
-====================================*/
-#footer-wrap {
-  clear: both;
-  margin: 0px;
-  position: relative;
-  top: 40px;
-}
-
-#copyright {
-  margin: 0px 25px;
-  width: 224px;
-  height: 48px;
-  float: left;
-  background: url('../images/deathstar-logo.jpg') no-repeat left;
-}
-
-#copyright p {
-  margin: 0px;
-  position: relative;
-  left: 100px;
-  top: 13px;
-  line-height: 16px;
-  font-size: 14px;
-  color: #5d5d5d;
-}
-
-#copyright p:first-child {
-  font-size: 12px;
-  color: #8F8F8F;
-}
-
-
-.footer-nav {
-  height: 30px;
-  margin: 38px 35px 38px 15px;
-  float: right;
-
-  li {
-    height: 11px;
-    line-height: 11px;
+  .event-details {
     float: left;
-    border-left: 1px solid #858585;
+    line-height: 24px;
+    padding: 5px 0px 0px 5px;
+    width: 195px;
+
+    h2 {
+      color: #8c8c8c;
+      margin: 0px;
+      font-size: 24px;
+
+      span {
+        color: #575757;
+        display: block;
+      }
+
+    }
+
+    p {
+      color: #8c8c8c;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+      position: relative;
+      top: 64px;
+    }
+
   }
 
-  li:first-child {
-    border: none
+  .event-img {
+    float: right;
+    height: 162px;
+    width: 236px;
   }
 
-  a {
-    font-size: 10px;
-    color: #606060;
-    padding: 1px 5px
+
+/* --- [ PAST & FUTURE EVENTS CALLOUT ] --- */
+
+  #past-events-wrap {
+    background: #e5e5e5;
+    height: 75px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding: 15px;
+    width: 462px;
   }
 
-}
+  #archive-list-wrap {
+    border-right: 1px solid #C7C7C7;
+    float: left;
+    height: 80px;
+    margin: 0px;
+    width: 175px;
+
+    h4 {
+      color: #8C8C8C;
+      font-size: 1.25em;
+      line-height: 1;
+      margin: 0 0 7px 0;
+    }
+
+    li {
+      background: url('../images/triangle-icon.png') no-repeat left;
+      margin: 0 0 0 3px;
+      padding-left: 12px;
+    }
+
+    li a {
+      color: #666;
+      font-size: .9em;
+      margin: 0;
+    }
+
+  }
+
+  #future-events-wrap {
+    border-left: 1px solid #f0f0f0;
+    float: right;
+    height: 80px;
+    margin: 0px;
+    padding-left: 20px;
+    width: 265px;
+
+    h3 {
+      color:#666;
+      font-size: 1.7em;
+      line-height: 1;
+      margin: 0 0 20px 0;
+
+      span {
+        color: #8C8C8C;
+        display: block;
+        margin: 0;
+      }
+
+    }
+
+  }
+
+/* --- [ FOOTER ] --- */
+
+  #footer-wrap {
+    clear: both;
+    margin: 0px;
+    position: relative;
+    top: 40px;
+  }
+
+  #copyright {
+    background: url('../images/deathstar-logo.jpg') no-repeat left;
+    float: left;
+    height: 48px;
+    margin: 0px 25px;
+    width: 224px;
+
+    p {
+      color: #5d5d5d;
+      font-size: 1.2em;
+      left: 100px;
+      line-height: 1.2;
+      margin: 0px;
+      position: relative;
+      top: 10px;
+    }
+
+    span {
+      color: #8f8f8f;
+      display: block;
+      font-size: .9em;
+    }
+
+  }
+
+  .footer-nav {
+    float: right;
+    height: 30px;
+    margin: 38px 35px 38px 15px;
+
+    li {
+      border-left: 1px solid #858585;
+      float: left;
+      height: 11px;
+      line-height: 11px;
+    }
+
+    li:first-child {
+      border: none
+    }
+
+    a {
+      color: #606060;
+      font-size: 10px;
+      padding: 1px 5px
+    }
+
+  }
