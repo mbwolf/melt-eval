@@ -1,26 +1,18 @@
 
 body {
-  background: #5b5b5b url(../images/body-bg.png) no-repeat top center;
-  font-family: Helvetica, Arial, sans-serif;
+  background: #5b5b5b url(../images/bg-body.png) no-repeat top center;
+  font: normal 12px/1.4 Helvetica, Arial, sans-serif;
 }
 
 /*==================================
         S T R U C T U R E
 ====================================*/
 
-.content-wrap {
+.container {
   clear: both;
-  width: 800px;
-  height: 711px;
-  margin: auto;
-  padding: 0px;
+  margin: 0 auto;
   position: relative;
-  top: 166px;
-  background: #F3F3F3;
-  border: 5px solid #DCDCDC;
-  -moz-border-radius: 15px;
-  -khtml-border-radius: 15px;
-  -webkit-border-radius: 15px;
+  width: 800px;
 }
 
 /*==================================
@@ -39,185 +31,204 @@ body {
 /*==================================
           H E A D E R
 ====================================*/
+
 #header-wrap {
-  width: 802px;
-  margin: 0 auto;
+  height:250px;
 }
-#sponsor-logo {
-  width: 85px;
-  height: 31px;
-  float: right;
-  margin-top: 10px;
-  padding-left: 58px;
-  position: relative;
-  right: 20px;
-  background: url('../images/meltmedia-logo.png') no-repeat left;
-}
-#sponsor-logo p {
-  margin: 3px 0px 0px 0px;
-  line-height: 9px;
-  font-size: 14px;
-  color: #3C3C3C;
-  font-weight: 700;
-}
-#sponsor-logo p:first-child {
-  font-size: 9px;
-  color: #868686;
-  font-weight: normal;
-}
+
 #header-nav {
-  width: 365px;
-  height: 15px;
-  display: block;
-  margin: 0px;
-  padding: 4px 0px;
-  float: left;
-  position: relative;
-  left: 20px;
   background: #D5D5D5;
   filter: alpha(opacity=40);
-  -moz-opacity: .4;
-  -khtml-opacity: .4;
-  opacity: .4;
-}
-#header-nav li {
   float: left;
-  padding: 1px 8px;
-  line-height: 13px;
-  font-size: 12px;
-  color: #292929;
-  border-left: 1px solid #292929;
+  height: 15px;
+  opacity: .4;
+  padding: 4px 0px;
+  position: relative;
+
+  li {
+    float: left;
+    padding: 1px 8px;
+    line-height: 13px;
+    font-size: 12px;
+    color: #2a2a2a;
+    border-left: 1px solid #292929;
+  }
+
+  li:first-child {
+    border: none
+  }
+
+  li a {
+    color: #2A2A2A
+  }
+
+  li a:hover {
+    color: #2A2A2A;
+    text-decoration: underline;
+  }
+
 }
-#header-nav li:first-child {
-  border: none
-} /* call the first li element and removes the border on the left */
-#header-nav li a:link {
-  color: #2A2A2A
+
+#sponsor-logo {
+  display:block;
+  width: 130px;
+  height: 30px;
+  top: 10px;
+  position: absolute;
+  right: 20px;
+  background: url('../images/logo-meltmedia.png') no-repeat;
+  -webkit-transition:background .2s ease-in-out;
+
+  &:hover {
+    background-position: 0 -35px;
+  }
+
 }
-#header-nav li a:hover {
-  color: #2A2A2A;
-  text-decoration: underline;
+
+.tagline {
+  bottom: 0;
+  color: #dcdcdc;
+  font-size: 2.9em;
+  font-weight: normal;
+  letter-spacing: .05em;
+  line-height:.7;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 35px;
 }
-#header-nav li a:active {
-  color: #2A2A2A
-}
-#header-nav li a:visited {
-  color: #2A2A2A
-}
-#header-wrap h1 {
-  clear: both;
-  nowhitespace: afterproperty;
-  width: 415px;
-  margin: 0px;
-  /* need to declare margin: 0; for safari */ position:relative; top:175px; right:20px; float:right; font-size:36px; font-weight:normal; color:#DCDCDC; ;
+
+#content-wrap {
+  background: #F3F3F3;
+  border: 5px solid #DCDCDC;
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  margin-bottom: 30px;
 }
 
 /*==================================
           S I D E B A R
 ====================================*/
 
-#sidebar-left {
+#sidebar {
   width: 200px;
   float: left;
 }
-#content-nav {
+
+.main-nav {
   margin: 20px 0px 0px 0px;
   nowhitespace: afterproperty;
   padding: 0px;
-  /* need to declare padding: 0; for safari */   ;
+
+  li {
+    width: 200px;
+    height: 35px;
+  }
+
+  a {
+    padding: 6px 15px 5px 20px;
+    font-size: 17px;
+    color: #b7b7b7;
+  }
+
+  a:hover {
+    padding: 6px 15px 5px 20px;
+    background: #dcdcdc;
+    color: #4d8fbd;
+    text-decoration: none;
+  }
+
+  a.active {
+    color: #4d8fbd;
+    background: #dcdcdc;
+    padding-left: 20px;
+
+    &:hover {
+      cursor: default;
+    }
+
+  }
+
 }
-#content-nav li {
-  width: 200px;
-  height: 35px;
-}
-#content-nav a:link {
-  padding: 6px 15px 5px 20px;
-  font-size: 17px;
-  font-weight: normal;
-  color: #b7b7b7;
-}
-#content-nav a:hover {
-  padding: 6px 15px 5px 20px;
-  background: #DCDCDC;
-  color: #FFF;
-  text-decoration: none;
-}
-#content-nav a:active {
-  padding: 6px 15px 5px 20px
-}
-#content-nav a:visited {
-  padding: 6px 15px 5px 20px;
-  font-size: 17px;
-  font-weight: normal;
-  color: #b7b7b7;
-}
-#content-nav a.current {
-  color: #1b70ab;
-  background: #DCDCDC;
-  padding-left: 20px;
-} /* Style of the link in the nav when on that page */
-#callout-wrap {
-  width: 160px;
+
+#register-callout {
+  background: #dcdcdc;
   height: 248px;
+  padding-left: 30px;
   position: relative;
   top: 30px;
-  padding-left: 30px;
-  background: #DCDCDC;
+  width: 160px;
+
+  img {
+    position: relative;
+    top: -10px;
+  }
+
+  p {
+    color: #474747;
+    font-size: 1em;
+    margin: 0;
+    line-height: 1.3em;
+    width: 145px;
+  }
+
 }
-#callout-wrap img {
-  margin-top: -10px
-}
-#callout-wrap p {
-  width: 145px;
-  margin-top: 9px;
-  line-height: 14px;
-  font-size: 12px;
-  color: #474747;
-}
+
 /*==================================
-     C O N T E N T   R I G H T
+          C O N T E N T
 ====================================*/
-#content-right {
-  width: 518px;
-  nowhitespace: afterproperty;
+
+#content {
+  background: url(../images/bg-content.png) no-repeat;
   float: right;
-  margin: 0px;
-  /* need to declare margin: 0; for safari */ padding:0px 10px 0px 25px; background:url(../images/content-right-bg.png) no-repeat; ;
-}
-#content-right h2 {
+  margin: 0;
+  padding: 0 10px 0 25px;
   width: 518px;
-  nowhitespace: afterproperty;
-  height: 85px;
-  margin: 20px 0px 0px 0px;
-  padding: 0px;
-  /* need to declare margin: 0; for safari */ line-height:75px; font-size:85px; color:#DCDCDC; font-weight:normal; ;
+
+  h1 {
+    color: #d5d5d5;
+    font-size: 6.5em;
+    font-weight: normal;
+    line-height: 1;
+    margin: 20px 0;
+    padding: 0;
+  }
+
 }
-.event-wrap {
+
+.event {
   width: 477px;
   height: 162px;
   margin-top: 15px;
   padding: 7px;
   background: #D5D5D5;
 }
-.event-info {
+
+.event-details {
   width: 195px;
   float: left;
   line-height: 24px;
   padding: 5px 0px 0px 5px;
+
+  h2 {
+    margin: 0px;
+    font-size: 24px;
+    color: #8C8C8C;
+    text-shadow: 0 1px 0 rgba(255,255,255,.75);
+  }
+
+  p {
+    position: relative;
+    top: 64px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #8C8C8C;
+  }
+
 }
-.event-details {
-  position: relative;
-  top: 64px;
-  margin-bottom: 0px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #8C8C8C;
-}
-.event-title {
-  margin: 0px;
-  font-size: 24px;
-  color: #8C8C8C;
-}
+
 .event-date {
   color: #575757
 }
@@ -246,21 +257,20 @@ body {
   font-size: 15px;
   color: #8C8C8C;
 }
-#archive-list-wrap ul {
-  margin: 0px;
-  padding: 0px;
-} /* need to set the margin and padding to 0px on the ul list for safari */
+
 #archive-list-wrap li {
   margin: 0px 0px 0px 3px;
   padding-left: 12px;
   line-height: 15px;
   background: url('../images/triangle-icon.png') no-repeat left;
 }
+
 #archive-list-wrap li a {
   margin: 0px;
   font-size: 11px;
   color: #666;
 }
+
 #future-events-wrap {
   width: 265px;
   height: 80px;
@@ -269,16 +279,18 @@ body {
   float: right;
   border-left: 1px solid #F0F0F0;
 }
+
 #future-events-wrap h3 {
   line-height: 21px;
-  nowhitespace: afterproperty;
-  margin: 0px 0px 18px 0px;
-  /* need to set margin to 0px for safari */ font-size: 21px; color:#666; ;
+  margin: 0 0 18px 0;
+  font-size: 21px; color:#666;
 }
+
 #future-events-wrap h3:first-child {
   margin: 0px;
   color: #8C8C8C;
-} /* call the first h3 element and changes the color of the text to a dark gray */
+}
+
 /*==================================
            F O O T E R
 ====================================*/
@@ -288,6 +300,7 @@ body {
   position: relative;
   top: 40px;
 }
+
 #copyright {
   margin: 0px 25px;
   width: 224px;
@@ -295,6 +308,7 @@ body {
   float: left;
   background: url('../images/deathstar-logo.jpg') no-repeat left;
 }
+
 #copyright p {
   margin: 0px;
   position: relative;
@@ -304,38 +318,33 @@ body {
   font-size: 14px;
   color: #5d5d5d;
 }
+
 #copyright p:first-child {
   font-size: 12px;
   color: #8F8F8F;
-} /* call the first p element and changes the color of the text to a light gray */
-#footer-wrap ul {
+}
+
+
+.footer-nav {
   height: 30px;
-  margin: 38px 15px;
+  margin: 38px 35px 38px 15px;
   float: right;
-}
-#footer-wrap li {
-  height: 11px;
-  line-height: 11px;
-  float: left;
-  border-left: 1px solid #858585;
-}
-#footer-wrap li:first-child {
-  border: none
-} /* calls the first li element and removes the border on the left */
-#footer-wrap a {
-  font-size: 10px;
-  color: #606060;
-}
-#footer-wrap a:link {
-  padding: 1px 5px
-}
-#footer-wrap a:hover {
-  padding: 1px 5px;
-  text-decoration: underline;
-}
-#footer-wrap a:active {
-  padding: 1px 5px
-}
-#footer-wrap a:visited {
-  padding: 1px 5px
+
+  li {
+    height: 11px;
+    line-height: 11px;
+    float: left;
+    border-left: 1px solid #858585;
+  }
+
+  li:first-child {
+    border: none
+  }
+
+  a {
+    font-size: 10px;
+    color: #606060;
+    padding: 1px 5px
+  }
+
 }
