@@ -23,6 +23,36 @@ body {
     line-height: 1.4;
 }
 
+ul, ol {
+  list-style: none
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+a img {
+  border: none
+}
+
+.float-left {
+  float: left
+}
+.float-right {
+  float: right
+}
+.clear {
+  clear: both
+}
+.italic {
+  font-style: italic
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate.
@@ -88,26 +118,6 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes
