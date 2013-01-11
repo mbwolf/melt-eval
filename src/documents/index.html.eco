@@ -6,34 +6,50 @@ title: 'Welcome to the Dark Side | meltmedia HTML/CSS evaluation'
 
 <div id="content-wrap" class="container">
 
-  <%- @partial('sidebar.html') %>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#">about the Empire</a></li>
+      <li><a href="#">dark side FAQs</a></li>
+      <li><a href="#">merchandise</a></li>
+      <li><a class="active" href="#">events</a></li>
+      <li><a href="#">Death Star Project</a></li>
+    </ul>
+  </nav>
 
   <section id="content">
     <header>
       <h1>events</h1>
     </header>
 
-    <article class="event">
-      <div class="event-details">
-        <h2>DARK SIDE SINGLES NIGHT <span class="event-date">7 NOV 2009</span></h2>
+    <div id="events-wrap">
+
+      <article class="event">
+        <img class="event-img" src="images/single-nights.jpg" alt="Dark Side Single Nights Graphic"  />
+
+        <header>
+          <h2>DARK SIDE SINGLES NIGHT <span>7 NOV 2009</span></h2>
+        </header>
+
         <p>MEET THE ONE... <a class="arrow-link" href="#">details</a></p>
-      </div>
+      </article>
 
-      <img class="event-img" src="images/single-nights.jpg" alt="Dark Side Single Nights Graphic"  />
-    </article>
+      <article class="event">
+        <img class="event-img" src="images/pet-adoption.jpg" alt="The Empire Pet Adoption Graphic"  />
 
-    <article class="event">
-      <div class="event-details">
-        <h2>THE EMPIRE PET ADOPTION <span class="event-date">12-15 DEC 2009</span></h2>
+        <header>
+          <h2>THE EMPIRE PET ADOPTION <span>12-15 DEC 2009</span></h2>
+        </header>
+
         <p><a class="arrow-link" href="#">take me to your kittens</a></p>
-      </div>
+      </article>
 
-      <img class="event-img" src="images/pet-adoption.jpg" alt="The Empire Pet Adoption Graphic"  />
-    </article>
+      <%- @partial('archives-callout.html') %>
 
-    <%- @partial('archives-callout.html') %>
+    </div>
 
   </section> <!-- /end #content -->
+
+  <%- @partial('register-callout.html') %>
 
   <%- @partial('footer.html') %>
 
