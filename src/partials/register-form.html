@@ -8,32 +8,33 @@
       <p>By joining <em>The Force</em> you get exclusive access to news, tips, videos, and more... Just fill out your information below and you will be ready to go. May <em>The Force</em> be with you!</p>
 
       <div class="form-group">
-        <label>First Name</label>
-        <input type="text">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" value="">
       </div>
 
       <div class="form-group">
-        <label>Last Name</label>
-        <input type="text">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" value="">
       </div>
 
       <div class="form-group">
-        <label>Email Address</label>
-        <input type="text">
+        <label for="email-address">Email Address</label>
+        <input type="text" id="email-address" name="email-address" value="">
       </div>
 
       <div class="form-group">
-        <label>Confirm Email Address</label>
-        <input type="text">
+        <label for="email-confirm">Confirm Email Address</label>
+        <input type="text" id="email-confirm" name="email-confirm" value="">
       </div>
 
       <div id="captcha" class="form-group">
-        <input type="text" maxlength="1">
+        <input id="captcha-response" type="text" value="" maxlength="2">
         <label>What does this equal? <span class="num1"></span> + <span class="num2"></span></label>
+        <span class="error-msg">Captcha Response was invalid please try again!</span>
       </div>
 
       <div id="submit-btn-wrap">
-        <button type="submit" class="btn-primary">
+        <button id="btn-submit" type="submit" class="btn-primary">
           <div class="btn-top"></div>
           Submit
         </button>
@@ -49,9 +50,9 @@
 
     <p>You will receive an email shortly confirming your request to join <em>The Force</em>. Please allow for 2-3 weeks before you receive your first edition of the <em>The Force</em> newsletter.</p>
 
-    <div id="btn-register" class="btn-primary">
+    <div class="btn-primary">
       <div class="btn-top"></div>
-        <a href="#"><span class="btn-icon"></span>Back to the website</a>
+        <a class="js-btn-close" href="#">Back to the website</a>
     </div>
   </div>
 
@@ -62,11 +63,11 @@
 
     <p>We're sorry but your submission did not go through due to a server error, please try again later. If the problem persists please contact us at <a href="mailto:help@theforce.com">help@theforce.com</a></p>
 
-    <div id="btn-register" class="btn-primary">
+    <div class="btn-primary">
       <div class="btn-top"></div>
-        <a href="#"><span class="btn-icon"></span>Back to the website</a>
+        <a class="js-btn-close" href="#">Back to the website</a>
     </div>
   </div>
 
-  <a class="close-btn" href="#">Close</a>
+  <a class="btn-close js-btn-close" href="#">Close</a>
 </div>

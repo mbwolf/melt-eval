@@ -58,6 +58,7 @@
 .form-group {
   float: left;
   margin: 0 0 7px 0;
+  position: relative;
   width: 40%;
 
   &:nth-child(2n + 1){
@@ -86,6 +87,28 @@
     width: 30px;
   }
 
+  .error-msg {
+    left: 230px;
+    position: absolute;
+    top: -2px;
+  }
+
+  &.form-error {
+
+    input {
+      border:1px solid #b94a48;
+    }
+
+    label {
+      color: #b94a48;
+    }
+
+    .error-msg {
+      display:block;
+    }
+
+  }
+
 }
 
 
@@ -101,6 +124,17 @@
     width: 125px;
   }
 
+}
+
+.error-msg {
+  background: #f2dede;
+  border: 1px solid #eed3d7;
+  .border-radius(4px);
+  color: #b94a48;
+  display: none;
+  font-weight: bold;
+  padding: 8px 35px 8px 14px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 
