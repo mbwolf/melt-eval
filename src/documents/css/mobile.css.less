@@ -1,13 +1,31 @@
+@import "mixins.css.less";
+
 @media screen and (max-width: 800px){
 
-  .event-img {
-    width:30%;
+  #register-form {
+    left: 2.5%;
+    margin-left: 0;
+  }
+
+  .event {
+
+    header h2 {
+      font-size: 1.8em;
+    }
+
+    img {
+      width: 45%;
+    }
+
+  }
+
+  #register-callout {
+    width: 155px;
   }
 
 }
 
-
-@media screen and (max-width: 480px){
+@media screen and (max-width: 710px){
 
   #content {
     clear: both;
@@ -122,11 +140,49 @@
     a {
       color: #ccc;
     }
+
+  }
+
+/* --- [ REGISTER FORM ] --- */
+
+  #register-form {
+    top: 2.5%;
+
+    p {
+      text-align: center;
+      width: 100%;
+    }
+
+  }
+
+  .form-group {
+    width:45%;
+
+    &:nth-child(2n + 1){
+      margin: 0 25px 7px 0;
+    }
+
+  }
+
+  #submit-btn-wrap {
+    width: 98%;
   }
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width:510px){
+
+  .event {
+
+    img {
+      width: 45%;
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 479px){
 
   #header-nav li {
     font-size: .8em;
@@ -150,8 +206,8 @@
   .event {
 
     header {
-      clear:both;
-      width:100%;
+      clear: both;
+      width: 100%;
 
       h2 {
         font-size: 1.5em;
@@ -167,9 +223,9 @@
     }
 
     p {
-      clear:both;
-      margin:20px 0 5px;
-      position:relative;
+      clear: both;
+      margin: 20px 0 5px;
+      position: relative;
     }
 
   }
@@ -183,6 +239,23 @@
     p {
       font-size: 1.1em;
       margin-top: 12px;
+    }
+
+  }
+
+  #register-form {
+
+    p {
+      text-align: left;
+    }
+
+  }
+
+  .form-group {
+    width:95%;
+
+    &:nth-child(2n + 1){
+      margin: 0 0 7px 0;
     }
 
   }

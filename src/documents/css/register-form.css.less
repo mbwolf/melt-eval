@@ -1,0 +1,106 @@
+@import "mixins.css.less";
+
+#register-form {
+  background: #fff;
+  display: none;
+  left: 50%;
+  margin-left: -400px;
+  position: absolute;
+  top: 20%;
+  z-index: 2000;
+
+  form,
+  .form-response {
+    padding: 50px 5% 35px;
+  }
+
+  fieldset {
+    border: none;
+    margin: 0;
+  }
+
+  legend,
+  .form-response h2 {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #2a2a2a;
+    text-align: center;
+  }
+
+  p {
+    color: #4a4a4a;
+    font-size: 1.2em;
+    margin: 10px auto 30px;
+    text-align:center;
+    width: 90%;
+  }
+
+  .btn-primary {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    padding: 8px 15px 7px;
+  }
+
+}
+
+
+#submit-btn-wrap {
+  border-top: 1px solid #dcdcdc;
+  clear: both;
+  margin: 20px auto 0;
+  padding-top: 25px;
+  position: relative;
+  top: 15px;
+  width: 90%;
+}
+
+.form-group {
+  float: left;
+  margin: 0 0 7px 0;
+  width: 40%;
+
+  &:nth-child(2n + 1){
+    margin: 0 5% 0 7%;
+  }
+
+  label {
+    display: block;
+  }
+
+}
+
+#captcha {
+  margin-top: 5px;
+  width: 100%;
+
+  label {
+    padding-top: 7px;
+  }
+
+  input[type="text"] {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    width: 30px;
+  }
+
+}
+
+
+.form-response {
+  display: none;
+
+  h2 {
+    text-align: center;
+  }
+
+  .btn-primary {
+    margin: 0 auto;
+    width: 125px;
+  }
+
+}
+
+
