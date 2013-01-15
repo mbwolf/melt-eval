@@ -27,7 +27,7 @@
       $registerBtn = $( "#btn-register a" );
       $closeBtn = $( ".js-btn-close" );
       $formResponse = $( ".form-response" );
-      $submitBtn = $( "#btn-submit" );
+      $submitBtn = $( "#btn-submit a" );
       $captchaWrap = $( "#captcha" );
       $successMsg = $( "#success-msg" );
       $errorMsg = $( "#error-msg" );
@@ -53,7 +53,7 @@
         register.hideForm();
       });
 
-      $regForm.submit(function(e){
+      $submitBtn.on("click", function(e){
         e.preventDefault();
         register.validate()
       });

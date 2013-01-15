@@ -30,7 +30,7 @@ title: 'Welcome to the Dark Side | meltmedia HTML/CSS evaluation'
           <h2>DARK SIDE SINGLES NIGHT <span>7 NOV 2009</span></h2>
         </header>
 
-        <p>MEET THE ONE... <a class="arrow-link" href="#">details</a></p>
+        <p>MEET THE ONE... <a href="#">details <span class="arrow"></span></a></p>
       </article>
 
       <article class="event">
@@ -40,7 +40,7 @@ title: 'Welcome to the Dark Side | meltmedia HTML/CSS evaluation'
           <h2>THE EMPIRE PET ADOPTION <span>12-15 DEC 2009</span></h2>
         </header>
 
-        <p><a class="arrow-link" href="#">take me to your kittens</a></p>
+        <p><a href="#">take me to your kittens <span class="arrow"></span></a></p>
       </article>
 
       <%- @partial('archives-callout.html') %>

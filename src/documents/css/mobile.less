@@ -27,6 +27,15 @@
 
 @media screen and (max-width: 710px){
 
+  #welcome-popup {
+
+    ul {
+      margin: 0;
+      width: 95%;
+    }
+
+  }
+
   #content {
     clear: both;
     float: none;
@@ -208,25 +217,26 @@
 
     ul {
       margin: 0;
+      width: 90%;
 
       #docpad {
-        background-position: 5px 7px;
+        background-position: -240px 7px;
       }
 
       #responsive {
-        background-position: 5px -31px;
+        background-position: -240px -31px;
       }
 
       #grunt {
-        background-position: 5px -77px;
+        background-position: -240px -77px;
       }
 
       #less {
-        background-position: 6px -133px;
+        background-position: -240px -133px;
       }
 
       #github {
-        background-position: 7px -180px;
+        background-position: -240px -180px;
       }
 
     }
@@ -309,10 +319,14 @@
 
   }
 
+  .divider {
+    width: 100%;
+  }
+
   .form-group {
     width:95%;
 
-    &:nth-child(2n + 2){
+    &.leading-form-input {
       margin: 0 0 7px 0;
     }
 

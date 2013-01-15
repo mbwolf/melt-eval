@@ -11,7 +11,7 @@
 
   form,
   .form-response {
-    padding: 50px 5% 35px;
+    padding: 50px 5% 25px;
   }
 
   fieldset {
@@ -19,8 +19,12 @@
     margin: 0;
   }
 
-  legend,
-  .form-response h2 {
+  legend {
+    text-align: center;
+  }
+
+  h2 {
+    display: block;
     font-size: 1.7em;
     font-weight: bold;
     color: #2a2a2a;
@@ -39,10 +43,8 @@
     clear: both;
     display: block;
     margin: 0 auto;
-  }
-
-  #btn-submit {
-    padding: 8px 15px 7px;
+    text-align: center;
+    width: 155px;
   }
 
   .error-msg {
@@ -61,24 +63,13 @@
 
 }
 
-
-#submit-btn-wrap {
-  border-top: 1px solid #dcdcdc;
-  clear: both;
-  margin: 20px auto 0;
-  padding-top: 25px;
-  position: relative;
-  top: 15px;
-  width: 90%;
-}
-
 .form-group {
   float: left;
   margin: 0 0 7px 0;
   position: relative;
   width: 40%;
 
-  &:nth-child(2n + 2){
+  &.leading-input-wrap {
     margin: 0 5% 0 7%;
   }
 

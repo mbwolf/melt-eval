@@ -23,6 +23,10 @@
 	<!-- DocPad Styles + Our Own -->
 	<%- @getBlock('styles').add(['/css/all.css']).toHTML() %>
 
+	<!--[if lt IE 9]>
+		<script src="/scripts/html5shiv.js"></script>
+	<![endif]-->
+
 </head>
 <body>
 
