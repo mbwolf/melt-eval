@@ -1,0 +1,15 @@
+{
+  "min": {
+    "js": {
+      "src": [
+        "out/vendor/jquery.js",
+        "out/vendor/log.js",
+        "out/vendor/modernizr.js",
+        "out/vendor/jquery.cookie.js",
+        "out/scripts/welcome.js",
+        "out/scripts/register.js"
+      ],
+      "dest": "out/scripts/all.min.js"
+    }
+  }
+}

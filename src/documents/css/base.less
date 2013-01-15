@@ -1,4 +1,4 @@
-@import "mixins.css.less";
+@import "mixins.less";
 
 body {
   background: #5b5b5b url(../images/bg-body.png) no-repeat top center;
@@ -51,7 +51,7 @@ body {
 /* --- [ HEADER SPONSOR LOGO ] --- */
 
   #sponsor-logo {
-    background: url('../images/logo-meltmedia.png') no-repeat;
+    background: url('../images/sprite.png') no-repeat 0 -68px;
     display: block;
     height: 30px;
     top: 10px;
@@ -60,11 +60,11 @@ body {
     width: 130px;
 
     &:hover {
-      background-position: 0 -35px;
+      background-position: 0 -103px;
     }
 
     &:visited {
-      background-position: 0 0;
+      background-position: 0 -68px;
     }
 
   }
@@ -160,13 +160,13 @@ body {
       &:hover {
 
         .btn-icon {
-          background-position: 0 -27px;
+          background-position: -33px -26px;
         }
 
       }
 
       .btn-icon {
-        background: url(../images/icon-register-btn.png) no-repeat;
+        background: url(../images/sprite.png) no-repeat  -33px 1px;
         left: 7px;
         top: 5px;
       }
@@ -337,7 +337,7 @@ body {
   }
 
   #copyright {
-    background: url('../images/deathstar-logo.jpg') no-repeat left;
+    background: url('../images/sprite.png') no-repeat 0 -155px;
     float: left;
     height: 48px;
     margin: 0 25px;

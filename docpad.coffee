@@ -12,16 +12,10 @@ docpadConfig = {
 		# Specify some site properties
 		site:
 			# The production url of our website
-			url: "http://website.com"
-
-			# Here are some old site urls that you would like to redirect from
-			oldUrls: [
-				'www.website.com',
-				'website.herokuapp.com'
-			]
+			url: "http://mbwolf.com/melt-eval/"
 
 			# The default title of our website
-			title: "Welcome to the Dark Side"
+			title: "Welcome to the Dark Side | meltmedia front-end evaluation"
 
 			# The website description (for SEO)
 			description: """
@@ -86,6 +80,24 @@ docpadConfig = {
 					res.redirect(newUrl+req.url, 301)
 				else
 					next()
+
+		# Write After
+		# Used to minify our assets with grunt
+		writeAfter: (opts,next) ->
+		    # Prepare
+		    docpad = @docpad
+		    rootPath = docpad.config.rootPath
+		    balUtil = require 'bal-util'
+
+		    # Perform the grunt `min` task
+		    # https://github.com/gruntjs/grunt/blob/0.3-stable/docs/task_min.md
+		    command = ["#{rootPath}/node_modules/.bin/grunt", 'min']
+
+		    # Execute
+		    balUtil.spawn(command, {cwd:rootPath,output:true}, next)
+
+		    # Chain
+		    @
 }
 
 # Export our DocPad Configuration
