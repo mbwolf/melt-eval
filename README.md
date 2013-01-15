@@ -1,6 +1,4 @@
-# meltmedia HTML/CSS test
-
-## Getting Started
+# meltmedia HTML/CSS evaluation
 
 This repo contains the meltmedia HTML/CSS evaluation. This project was built from the HTML5 Boilerplate skeleton for DocPad. To run the site locally follow the below instructions, to view the site live visit [http://mbwolf.com/melt-eval/](http://mbwolf.com/melt-eval/)
 
@@ -9,8 +7,8 @@ This repo contains the meltmedia HTML/CSS evaluation. This project was built fro
 1. Clone the project and run the server
 
   ``` bash
-  git clone git://github.com/docpad/html5-boilerplate.docpad.git
-  cd html5-boilerplate.docpad
+  git clone git://github.com/mbwolf/melt-eval.docpad.git
+  cd melt-eval.docpad
   npm install
   docpad run
   ```
