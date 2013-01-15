@@ -39,7 +39,24 @@
     clear: both;
     display: block;
     margin: 0 auto;
+  }
+
+  #btn-submit {
     padding: 8px 15px 7px;
+  }
+
+  .error-msg {
+    background: #f2dede;
+    border: 1px solid #eed3d7;
+    .border-radius(4px);
+    color: #b94a48;
+    display: none;
+    font-weight: bold;
+    margin: 0 auto 35px;
+    padding: 8px 14px 7px;
+    position: relative;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    width: 85%;
   }
 
 }
@@ -61,7 +78,7 @@
   position: relative;
   width: 40%;
 
-  &:nth-child(2n + 1){
+  &:nth-child(2n + 2){
     margin: 0 5% 0 7%;
   }
 
@@ -87,30 +104,7 @@
     width: 30px;
   }
 
-  .error-msg {
-    left: 230px;
-    position: absolute;
-    top: -2px;
-  }
-
-  &.form-error {
-
-    input {
-      border:1px solid #b94a48;
-    }
-
-    label {
-      color: #b94a48;
-    }
-
-    .error-msg {
-      display:block;
-    }
-
-  }
-
 }
-
 
 .form-response {
   display: none;
@@ -121,20 +115,22 @@
 
   .btn-primary {
     margin: 0 auto;
-    width: 125px;
+    width: 155px;
   }
 
 }
 
-.error-msg {
-  background: #f2dede;
-  border: 1px solid #eed3d7;
-  .border-radius(4px);
-  color: #b94a48;
-  display: none;
-  font-weight: bold;
-  padding: 8px 35px 8px 14px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+.form-error {
+
+  input {
+    border:1px solid #b94a48;
+    color: #b94a48;
+  }
+
+  label {
+    color: #b94a48;
+  }
+
 }
 
 

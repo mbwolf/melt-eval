@@ -30,6 +30,7 @@
 
 	<%- @content %>
 
+	<%- @partial('welcome-popup.html') %>
 	<%- @partial('register-form.html') %>
 
 	<div id="overlay"></div>
@@ -39,6 +40,6 @@
     <script>window.jQuery || document.write('<script src="/vendor/jquery.js"><\/script>')</script>
 
 	<!-- DocPad Scripts + Our Own -->
-	<%- @getBlock('scripts').add(['/vendor/log.js', '/vendor/modernizr.js', "/scripts/main.js"]).toHTML() %>
+	<%- @getBlock('scripts').add(['/vendor/log.js', '/vendor/modernizr.js', '/vendor/jquery.cookie.js', '/scripts/welcome.js', '/scripts/register.js']).toHTML() %>
 </body>
 </html>

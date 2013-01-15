@@ -1,0 +1,74 @@
+
+#welcome-popup {
+  background: #fff;
+  display: none;
+  left: 50%;
+  margin-left: -280px;
+  position: absolute;
+  top: 15%;
+  width: 560px;
+  z-index: 2001;
+
+  h2 {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #2a2a2a;
+    text-align: center;
+  }
+
+  p, li {
+    color: #4a4a4a;
+    font-size: 1.2em;
+    margin: 10px auto 30px;
+    width: 90%;
+  }
+
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 85%;
+
+    li {
+      background: url(../images/sprite-icons.png) no-repeat;
+      border-bottom: 1px solid #dcdcdc;
+      display: inline-block;
+      margin: 0;
+      padding: 14px 0 13px 50px;
+      text-align: left;
+    }
+
+    li:first-child {
+      border-top: 1px solid #dcdcdc;
+    }
+
+    #docpad {
+      background-position: 5px 6px;
+    }
+
+    #responsive {
+      background-position: 5px -38px;
+    }
+
+    #grunt {
+      background-position: 5px -87px;
+    }
+
+    #github {
+      background-position: 6px -133px;
+    }
+
+  }
+
+  .btn-primary {
+    display:block;
+    margin: 0 auto 35px;
+    text-align: center;
+    width: 130px;
+  }
+
+}
+
+#popup-content {
+  padding: 50px 5% 35px;
+  text-align: center;
+}
