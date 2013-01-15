@@ -1,24 +1,22 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com/) skeleton for [DocPad](https://github.com/bevry/docpad)
-Bare essentials for building a modern website with best practices
-
+# meltmedia HTML/CSS test
 
 ## Getting Started
+
+This repo contains the meltmedia HTML/CSS evaluation. This project was built from the HTML5 Boilerplate skeleton for DocPad. To run the site locally follow the below instructions, to view the site live visit [http://mbwolf.com/melt-eval/](http://mbwolf.com/melt-eval/)
 
 1. [Install DocPad](https://github.com/bevry/docpad)
 
 1. Clone the project and run the server
 
-	``` bash
-	git clone git://github.com/docpad/html5-boilerplate.docpad.git
-	cd html5-boilerplate.docpad
-	npm install
-	docpad run
-	```
-
+  ``` bash
+  git clone git://github.com/docpad/html5-boilerplate.docpad.git
+  cd html5-boilerplate.docpad
+  npm install
+  docpad run
+  ```
 1. [Open http://localhost:9778/](http://localhost:9778/)
 
 1. Start hacking away by modifying the `src` directory
-
 
 ## License
 
