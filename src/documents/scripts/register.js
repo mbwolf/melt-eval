@@ -35,6 +35,7 @@
 
     initEvents: function(){
 
+      // Scrolls the window to the top and opens the reg form
       $registerBtn.on( "click", function(e){
         e.preventDefault();
         $( "html,body" ).animate({
@@ -63,6 +64,8 @@
     showForm: function(){
       $overlay.fadeIn();
 
+      // Sets a session cookie, so that the user can only send the
+      // form once during the same session
       if(!$.cookie("form_sent")){
         $regForm.fadeIn();
       }
@@ -74,6 +77,8 @@
       $overlay.fadeOut();
       $formWrap.fadeOut();
 
+      // Checks if the form has been sent, if it has keep the
+      // form response showing
       if(!$.cookie("form_sent")){
         $formResponse.fadeOut();
       }
@@ -130,7 +135,7 @@
       }
 
       // Email Address Validation
-
+      // If email address does not match email confirm or if email address is empty or if email confirm is empty
       if( ($emailAddress.val() != $emailConfirm.val()) || $emailAddress.val() === "" || $emailConfirm.val() === ""){
         $emailAddress.parent().addClass( errorClass );
         $emailConfirm.parent().addClass( errorClass );
@@ -152,6 +157,7 @@
         isValid = true;
       }
 
+      // If all conditions pass and return true, send the form
       if(isValid){
         register.formSuccess();
       } else {
@@ -161,7 +167,6 @@
     },
 
     formSuccess: function(){
-
       $regForm.fadeOut(300, function(){
         $successMsg.fadeIn();
       });
