@@ -25,6 +25,7 @@
 
 	<!--[if lt IE 9]>
 		<script src="/scripts/html5shiv.js"></script>
+		<link rel="stylesheet" href="/css/ie.css" />
 	<![endif]-->
 
 </head>

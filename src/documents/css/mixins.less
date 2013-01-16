@@ -6,3 +6,11 @@
      -moz-border-radius: @radius;
           border-radius: @radius;
 }
+
+.opacity(@opacity){
+    @ieOpacity: @opacity * 100;
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})"; // IE 8
+        filter: ~"alpha(opacity=@{ieOpacity})";                                   // IE 5-7
+  -moz-opacity: @opacity;
+       opacity: @opacity;
+}
